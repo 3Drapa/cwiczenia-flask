@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: left;
+}
+
+p {
+    text-align: justify;
+}
