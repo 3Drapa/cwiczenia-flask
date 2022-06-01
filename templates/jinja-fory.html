@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+    {% block content %}
+    <main>
+        <div class="container">
+            <h1>Jinja Fory</h1>
+        </div>
+        <div class="container">
+            <h2>Lista:</h2>
+            {% for element in jlista %}
+            <li>{{element}}</li>
+            {% endfor %}
+        </div>
+    </main>
+    {% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+    {% block content %}
+    <main>
+        <div class="container">
+            <h1>Jinja Fory</h1>
+        </div>
+        <div class="container">
+            <h2>Lista:</h2>
+            {% if jnr==1 %}
+            <li>Hura: {{jnr}}</li>
+            {% elif jnr==2 %}
+            <li>Bura: {{jnr+2}}</li>
+            {% else %}
+            <li>Wichura: {{jnr+4}}</li>
+            {% endif %}
+        </div>
+    </main>
+    {% endblock %}
