@@ -1,0 +1,8 @@
+Proponuje zawsze uzywac venv
+czyli w katalogu projektu (jesli tego nie robiles wczesniej)
+python3 -m venv .venv
+source .venv/bin/activate
+potem aktualizacja pip:
+pip install --upgrade pip
+a dalej instalujesz potrzebne moduly
+Zawsze przed uruchomieniem tego projektu z konsoli muszisz aktywowac srodowisko venv
