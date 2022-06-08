@@ -1,7 +1,7 @@
 import time
 # time.sleep(10) # zatrzymaj program na 10 sekund
 
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta, timezone, tzinfo
 obiekt_daty_1 = datetime.now(tz=None) # czas teraz
 print(obiekt_daty_1)
 
@@ -50,3 +50,16 @@ obiekt_daty = datetime.today()
 obiekt_daty_1 = obiekt_daty.replace(year=2002, hour=12)
 print(obiekt_daty_1)
 
+# format daty
+format_daty = '%Y-%m-%d T%H:%M:%S'
+# format_daty = '%A, %B %d, %Y at %H:%M %p %Z'
+print(data_obiekt.strftime(format_daty))
+
+# ________________________________TIME_________________________
+import time
+
+print(time.time()) # czas w sekundach
+print(time.time_ns()) # czas w milisekundach
+
+liczbowa_reprezentacja_czasu = 13342444434
+print(datetime.fromtimestamp(liczbowa_reprezentacja_czasu))
