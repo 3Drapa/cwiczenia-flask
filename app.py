@@ -1,3 +1,4 @@
+import os
 from os import sep
 from flask import Flask, render_template, session
 import wikipedia
@@ -25,12 +26,17 @@ def test():
     
     # *******************************************
     # zapisuje wszystkie linki do zdjęć na stronie
-    # !!!!!!! dodać warunek, że zapisuje tylko raz !!!!!!!!
-    # jeżeli plik ma coś zapisane, to nie zapisuj
-    all_img_on_page = ny.images
-    for image_url in all_img_on_page:
-        with open("all_img_on_page.txt", "a+") as f:
-            f.write(image_url + '\n')
+    if not os.path.exists("all_img_on_page.txt"): # jeżeli plik nie istnieje
+    # if os.stat("all_img_on_page.txt").st_size == 0: # jeżeli plik jest pusty
+        all_img_on_page = ny.images
+        for image_url in all_img_on_page:
+            if not image_url.endswith('.svg'):
+                with open("all_img_on_page.txt", "a+") as f:
+                    f.write(image_url + '\n')
+            else:
+                pass
+    else:
+        pass
     # *******************************************
     
     with open('all_img_on_page.txt', 'r') as f:
