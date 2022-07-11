@@ -22,7 +22,8 @@ def jinja_ify():
 
 @app.route("/test")
 def test():
-    ny = wikipedia.page("Maria Skłodowska-Curie")
+    # ny = wikipedia.page("Maria Skłodowska-Curie")
+    ny = wikipedia.page("Witold Pilecki")
     
     # *******************************************
     # zapisuje wszystkie linki do zdjęć na stronie
